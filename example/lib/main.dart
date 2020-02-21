@@ -12,8 +12,13 @@ class _MyAppState extends State<MyApp> {
   bool _isLoading = true;
   PDFDocument document;
 
+  PDFViewerController ctrl =PDFViewerController();
+
   @override
   void initState() {
+    ctrl.listener=(pageNumber){
+      print(pageNumber);
+    };
     super.initState();
     loadDocument();
   }
@@ -72,7 +77,7 @@ class _MyAppState extends State<MyApp> {
         body: Center(
             child: _isLoading
                 ? Center(child: CircularProgressIndicator())
-                : PDFViewer(document: document)),
+                : PDFViewer(document: document,controller: ctrl,)),
       ),
     );
   }
