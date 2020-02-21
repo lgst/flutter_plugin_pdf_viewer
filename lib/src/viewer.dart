@@ -36,7 +36,7 @@ class _PDFViewerState extends State<PDFViewer> {
   bool _isLoading = true;
   int _oldPage = 0;
   PDFPage _page;
-  List<PDFPage> _pages = List();
+//  List<PDFPage> _pages = List();
 
   set _pageNumber(int num) => widget.controller.pageNumber = num;
 
@@ -51,19 +51,19 @@ class _PDFViewerState extends State<PDFViewer> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    _oldPage = 0;
-    _pageNumber = 1;
-    _isLoading = true;
-    _pages.clear();
+//    _oldPage = 0;
+//    _pageNumber = 1;
+//    _isLoading = true;
+//    _pages.clear();
   }
 
   @override
   void didUpdateWidget(PDFViewer oldWidget) {
     super.didUpdateWidget(oldWidget);
-    _oldPage = 0;
-    _pageNumber = 1;
-    _isLoading = true;
-    _pages.clear();
+//    _oldPage = 0;
+//    _pageNumber = 1;
+//    _isLoading = true;
+//    _pages.clear();
   }
 
   _loadPage() async {
